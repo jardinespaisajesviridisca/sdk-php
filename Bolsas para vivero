@@ -1,0 +1,23 @@
+Get an existent Checkout preference:
+$preferenceResult = $mp->get_preference("PREFERENCE_ID");
+
+print_r ($preferenceResult);
+Create a Checkout preference:
+$preference = array (
+    "items" => array (
+        array (
+            "title" => "Test",
+            "quantity" => 1,
+            "currency_id" => "USD",
+            "unit_price" => 10.4
+        )
+    )
+);
+
+$preferenceResult = $mp->create_preference($preference);
+
+print_r ($preferenceResult);
+
+
+
+
